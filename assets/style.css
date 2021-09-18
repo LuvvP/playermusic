@@ -1,0 +1,200 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --width: 200px;
+}
+
+html body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.player{
+}
+
+.dashboard{
+    background-color: #fff;
+    justify-content: center;
+    width: 95.733333333%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    padding: 16px;
+    max-width: 480px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    box-sizing: unset;
+}
+
+header{
+    text-align: center;
+}
+
+header > h4{
+    color: rgb(255, 0, 128);
+    font-size: 12px;
+}
+
+header h4,
+header h2{
+    margin: 5px;
+}
+
+.progress {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 7px; /* Specified height */
+  background: #cccaca; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: all 0.3s linear;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.progress::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 14px; /* Set a specific slider handle width */
+  height: 7px; /* Slider handle height */
+  background: rgba(255, 0, 128, 0.9); /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.progress::-moz-range-thumb {
+  width: 7px; /* Set a specific slider handle width */
+  height: 14px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+.thumb{
+    
+    margin-top: 8px;
+    display: flex;
+    height: var(--width);
+}
+
+.thumb .thumb-img{
+    margin: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: var(--width);
+    width: var(--width);
+    border-radius: 50%;
+}
+
+.control{
+    display: inline-flex;
+    justify-content: space-around;
+    margin: 24px 0 12px 0;
+}
+
+.control .btn{
+    line-height: 40px;
+}
+
+.control .disable{
+    display: none;
+}
+
+#progress{
+    margin-bottom: 15px;
+}
+
+.playlist{
+    margin-top: 430px;
+}
+
+.playlist .song {
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    width: 100%;
+    max-width: 480px;
+    padding: 6px 12px;
+    bottom: 0;
+}
+
+.song .thumb{
+    background-size: cover;
+    height: 3.125em;
+    width: 3.125em;
+    display: block;
+    border-radius: 50%;
+}
+
+.song .body{
+    flex: 1;
+    margin-left: 10px;
+}
+
+.song .title,
+.song .author{
+    margin: 8px 0;
+}
+
+.song .thumb,
+.song .option{
+    margin: 0 14px;
+}
+
+.btn{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.btn-active {
+    color: rgb(255, 0, 128);
+}
+
+.btn-toggle-play .icon-pause,
+.btn-toggle-play .icon-play{
+    color: #fff;
+    padding: 14px 15px;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 128);
+    display: none;
+}
+.btn .fas{
+    
+}
+
+.icon-pause{
+    display: none;
+}
+
+.playing .icon-pause{
+    display: block;
+}
+.btn .icon-play{
+    display: block;
+}
+.playing .icon-play{
+    display: none;
+}
+
+.song-active,
+.song-active.title,
+.song-active.author{
+    background-color: rgba(255, 0, 128, 0.6) !important;
+    color: #fff;
+}
+
+.song{
+    cursor: pointer;
+}
+
+.song:active{
+    opacity: 0.8;
+}
